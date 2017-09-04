@@ -19,14 +19,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [self my_addSubViews];
+    
+    
+    return YES;
+}
+
+
+- (void)my_addSubViews {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     MYBaseTabBarController *myTabBarCon = [[MYBaseTabBarController alloc] init];
     self.window.rootViewController = myTabBarCon;
     [self.window makeKeyAndVisible];
-    
-    
-    return YES;
+    //设置状态栏字体颜色
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 
