@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384311B0C4D8A2C7130C02D0 /* Pods_MY_NewRebirth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8952CDB777D6EE73129C5FE /* Pods_MY_NewRebirth.framework */; };
 		416CC1E71F5D04960023C86C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 416CC1E61F5D04960023C86C /* main.m */; };
 		416CC1EA1F5D04960023C86C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 416CC1E91F5D04960023C86C /* AppDelegate.m */; };
 		416CC1ED1F5D04960023C86C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 416CC1EC1F5D04960023C86C /* ViewController.m */; };
@@ -51,6 +52,9 @@
 		416CC2061F5D04960023C86C /* MY_NewRebirthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MY_NewRebirthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		416CC20A1F5D04960023C86C /* MY_NewRebirthUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MY_NewRebirthUITests.m; sourceTree = "<group>"; };
 		416CC20C1F5D04960023C86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A57E5C2868D58C8CF1220457 /* Pods-MY_NewRebirth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MY_NewRebirth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MY_NewRebirth/Pods-MY_NewRebirth.debug.xcconfig"; sourceTree = "<group>"; };
+		C3FCD69937C09EB259A57C40 /* Pods-MY_NewRebirth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MY_NewRebirth.release.xcconfig"; path = "Pods/Target Support Files/Pods-MY_NewRebirth/Pods-MY_NewRebirth.release.xcconfig"; sourceTree = "<group>"; };
+		E8952CDB777D6EE73129C5FE /* Pods_MY_NewRebirth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MY_NewRebirth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384311B0C4D8A2C7130C02D0 /* Pods_MY_NewRebirth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				416CC1FE1F5D04960023C86C /* MY_NewRebirthTests */,
 				416CC2091F5D04960023C86C /* MY_NewRebirthUITests */,
 				416CC1E31F5D04960023C86C /* Products */,
+				CD18B9F9CFFAF1592A8987C0 /* Pods */,
+				653F207F8D0DE3A6E2F0E501 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +108,7 @@
 		416CC1E41F5D04960023C86C /* MY_NewRebirth */ = {
 			isa = PBXGroup;
 			children = (
-				416CC1E81F5D04960023C86C /* AppDelegate.h */,
-				416CC1E91F5D04960023C86C /* AppDelegate.m */,
-				416CC1EB1F5D04960023C86C /* ViewController.h */,
-				416CC1EC1F5D04960023C86C /* ViewController.m */,
-				416CC1EE1F5D04960023C86C /* Main.storyboard */,
-				416CC1F11F5D04960023C86C /* Assets.xcassets */,
-				416CC1F31F5D04960023C86C /* LaunchScreen.storyboard */,
-				416CC1F61F5D04960023C86C /* Info.plist */,
-				416CC1E51F5D04960023C86C /* Supporting Files */,
+				416CC2181F5D08170023C86C /* Other */,
 			);
 			path = MY_NewRebirth;
 			sourceTree = "<group>";
@@ -140,6 +139,39 @@
 			path = MY_NewRebirthUITests;
 			sourceTree = "<group>";
 		};
+		416CC2181F5D08170023C86C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				416CC1E81F5D04960023C86C /* AppDelegate.h */,
+				416CC1E91F5D04960023C86C /* AppDelegate.m */,
+				416CC1EB1F5D04960023C86C /* ViewController.h */,
+				416CC1EC1F5D04960023C86C /* ViewController.m */,
+				416CC1EE1F5D04960023C86C /* Main.storyboard */,
+				416CC1F11F5D04960023C86C /* Assets.xcassets */,
+				416CC1F31F5D04960023C86C /* LaunchScreen.storyboard */,
+				416CC1F61F5D04960023C86C /* Info.plist */,
+				416CC1E51F5D04960023C86C /* Supporting Files */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		653F207F8D0DE3A6E2F0E501 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8952CDB777D6EE73129C5FE /* Pods_MY_NewRebirth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD18B9F9CFFAF1592A8987C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A57E5C2868D58C8CF1220457 /* Pods-MY_NewRebirth.debug.xcconfig */,
+				C3FCD69937C09EB259A57C40 /* Pods-MY_NewRebirth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 416CC20F1F5D04960023C86C /* Build configuration list for PBXNativeTarget "MY_NewRebirth" */;
 			buildPhases = (
+				EC560DFB8BFC961DFA99F845 /* [CP] Check Pods Manifest.lock */,
 				416CC1DE1F5D04960023C86C /* Sources */,
 				416CC1DF1F5D04960023C86C /* Frameworks */,
 				416CC1E01F5D04960023C86C /* Resources */,
+				D7E4730BC5790EA6899963F4 /* [CP] Embed Pods Frameworks */,
+				BAE4B0CA8CBB1B2B91EDD977 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +305,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BAE4B0CA8CBB1B2B91EDD977 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MY_NewRebirth/Pods-MY_NewRebirth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7E4730BC5790EA6899963F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MY_NewRebirth/Pods-MY_NewRebirth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC560DFB8BFC961DFA99F845 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		416CC1DE1F5D04960023C86C /* Sources */ = {
@@ -425,6 +508,7 @@
 		};
 		416CC2101F5D04960023C86C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A57E5C2868D58C8CF1220457 /* Pods-MY_NewRebirth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3H958E4V48;
@@ -437,6 +521,7 @@
 		};
 		416CC2111F5D04960023C86C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FCD69937C09EB259A57C40 /* Pods-MY_NewRebirth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3H958E4V48;
@@ -516,6 +601,7 @@
 				416CC2111F5D04960023C86C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		416CC2121F5D04960023C86C /* Build configuration list for PBXNativeTarget "MY_NewRebirthTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +610,7 @@
 				416CC2141F5D04960023C86C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		416CC2151F5D04960023C86C /* Build configuration list for PBXNativeTarget "MY_NewRebirthUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +619,7 @@
 				416CC2171F5D04960023C86C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
