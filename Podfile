@@ -19,5 +19,12 @@ pod 'MBProgressHUD' , '~> 0.9.2'
 pod 'MJExtension'
 #图片加载
 pod 'SDWebImage'
+#
+pod 'Aspects', '~> 1.4.1'
+#数据解析
+pod 'JSONKit', '~> 1.5pre'
+#
+pod 'ReactiveCocoa', '~> 2.5'
+
 
 end
