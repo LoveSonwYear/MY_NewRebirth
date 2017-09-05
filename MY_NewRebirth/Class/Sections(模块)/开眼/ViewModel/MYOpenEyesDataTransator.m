@@ -9,6 +9,7 @@
 #import "MYOpenEyesDataTransator.h"
 #import "MYOpenEyesAPIManager.h"
 #import "MYOpenEyesInfo.h"
+#import "MYOpenEyesItem.h"
 
 @implementation MYOpenEyesDataTransator
 
@@ -20,7 +21,8 @@
 //        return [[dailyListArray rac_sequence] map:^id(NSDictionary *value) {
 //            
 //            MYOpenEyesInfo *openEyesInfo = [[MYOpenEyesInfo alloc] initWithDict:value];
-//            
+//            MYOpenEyesItem *openEyesItem = [];
+//
 //        }];
         
     }
