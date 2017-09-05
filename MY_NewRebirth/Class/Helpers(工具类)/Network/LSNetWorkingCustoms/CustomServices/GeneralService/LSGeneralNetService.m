@@ -16,14 +16,25 @@
     return [[LSAppContext sharedInstance] isOnline];
 }
 
+
+/**
+ 线上环境
+ 生产环境
+ */
 - (NSString *)onlineApiBaseUrl {
 
-    return @"http://115.29.103.17:8030";
+//    return @"http://115.29.103.17:8030";
+    return @"http://baobab.wandoujia.com/";
 }
 
+/**
+ 线下环境
+ 测试环境
+ */
 - (NSString *)offlineApiBaseUrl {
 
-    return @"http://115.29.103.17:8030";
+//    return @"http://115.29.103.17:8030";
+    return @"http://baobab.wandoujia.com/";
 }
 
 @end

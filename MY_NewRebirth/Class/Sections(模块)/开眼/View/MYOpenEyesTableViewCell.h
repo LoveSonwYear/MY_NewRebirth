@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MYOpenEyesCellViewModel.h"
 
 @interface MYOpenEyesTableViewCell : UITableViewCell
+
+@property (nonatomic, strong)MYOpenEyesCellViewModel *openEyesCellViewModel;
+
 
 @end

@@ -46,6 +46,9 @@
 		413743291F5D5910004DD899 /* MYOpenEyesAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 413743281F5D5910004DD899 /* MYOpenEyesAPIManager.m */; };
 		4137432C1F5D5BAF004DD899 /* MYOpenEyesDataTransator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137432B1F5D5BAF004DD899 /* MYOpenEyesDataTransator.m */; };
 		4137432F1F5D5C60004DD899 /* MYOpenEyesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4137432E1F5D5C60004DD899 /* MYOpenEyesTableViewCell.m */; };
+		413FA3921F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 413FA3911F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.m */; };
+		413FA3961F5E89A700F7EFC4 /* MYOpenEyesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 413FA3951F5E89A700F7EFC4 /* MYOpenEyesInfo.m */; };
+		413FA3991F5E94AF00F7EFC4 /* MYOpenEyesItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 413FA3981F5E94AF00F7EFC4 /* MYOpenEyesItem.m */; };
 		416CC1E71F5D04960023C86C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 416CC1E61F5D04960023C86C /* main.m */; };
 		416CC1EA1F5D04960023C86C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 416CC1E91F5D04960023C86C /* AppDelegate.m */; };
 		416CC1ED1F5D04960023C86C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 416CC1EC1F5D04960023C86C /* ViewController.m */; };
@@ -160,6 +163,12 @@
 		4137432B1F5D5BAF004DD899 /* MYOpenEyesDataTransator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYOpenEyesDataTransator.m; sourceTree = "<group>"; };
 		4137432D1F5D5C60004DD899 /* MYOpenEyesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYOpenEyesTableViewCell.h; sourceTree = "<group>"; };
 		4137432E1F5D5C60004DD899 /* MYOpenEyesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYOpenEyesTableViewCell.m; sourceTree = "<group>"; };
+		413FA3901F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYOpenEyesCellViewModel.h; sourceTree = "<group>"; };
+		413FA3911F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYOpenEyesCellViewModel.m; sourceTree = "<group>"; };
+		413FA3941F5E89A700F7EFC4 /* MYOpenEyesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYOpenEyesInfo.h; sourceTree = "<group>"; };
+		413FA3951F5E89A700F7EFC4 /* MYOpenEyesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYOpenEyesInfo.m; sourceTree = "<group>"; };
+		413FA3971F5E94AF00F7EFC4 /* MYOpenEyesItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYOpenEyesItem.h; sourceTree = "<group>"; };
+		413FA3981F5E94AF00F7EFC4 /* MYOpenEyesItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYOpenEyesItem.m; sourceTree = "<group>"; };
 		416CC1E21F5D04960023C86C /* MY_NewRebirth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MY_NewRebirth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		416CC1E61F5D04960023C86C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		416CC1E81F5D04960023C86C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -429,6 +438,17 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
+		413FA3931F5E896300F7EFC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				413FA3941F5E89A700F7EFC4 /* MYOpenEyesInfo.h */,
+				413FA3951F5E89A700F7EFC4 /* MYOpenEyesInfo.m */,
+				413FA3971F5E94AF00F7EFC4 /* MYOpenEyesItem.h */,
+				413FA3981F5E94AF00F7EFC4 /* MYOpenEyesItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		416CC1D91F5D04960023C86C = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +610,7 @@
 				413743261F5D58D8004DD899 /* APIManager */,
 				416CC2231F5D265F0023C86C /* View */,
 				416CC2241F5D265F0023C86C /* ViewController */,
+				413FA3931F5E896300F7EFC4 /* Model */,
 				416CC2251F5D265F0023C86C /* ViewModel */,
 			);
 			path = "开眼";
@@ -622,6 +643,8 @@
 				413743241F5D55C6004DD899 /* MYOpenEyesViewModel.m */,
 				4137432A1F5D5BAF004DD899 /* MYOpenEyesDataTransator.h */,
 				4137432B1F5D5BAF004DD899 /* MYOpenEyesDataTransator.m */,
+				413FA3901F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.h */,
+				413FA3911F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -899,6 +922,8 @@
 				413743141F5D488E004DD899 /* MYBaseTabBarController.m in Sources */,
 				413743111F5D4865004DD899 /* MYBaseNavigationController.m in Sources */,
 				413742DF1F5D3DFE004DD899 /* LSGeneralNetService.m in Sources */,
+				413FA3991F5E94AF00F7EFC4 /* MYOpenEyesItem.m in Sources */,
+				413FA3961F5E89A700F7EFC4 /* MYOpenEyesInfo.m in Sources */,
 				413742FC1F5D3E81004DD899 /* LSDataItem.m in Sources */,
 				413742D81F5D3DFE004DD899 /* LSRequestGenerator.m in Sources */,
 				413742D11F5D3DFE004DD899 /* LSCacheObject.m in Sources */,
@@ -908,6 +933,7 @@
 				413742CF1F5D3DFE004DD899 /* LSAPIBaseManager.m in Sources */,
 				413743021F5D3E81004DD899 /* UIViewController+Standard.m in Sources */,
 				413742DA1F5D3DFE004DD899 /* LSURLResponse.m in Sources */,
+				413FA3921F5E45F100F7EFC4 /* MYOpenEyesCellViewModel.m in Sources */,
 				413742FD1F5D3E81004DD899 /* LSModel.m in Sources */,
 				413742D91F5D3DFE004DD899 /* LSRequestManager.m in Sources */,
 				413742FF1F5D3E81004DD899 /* LSIntercepter.m in Sources */,

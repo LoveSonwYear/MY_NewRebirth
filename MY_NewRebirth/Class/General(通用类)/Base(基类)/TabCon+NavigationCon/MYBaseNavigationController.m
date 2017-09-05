@@ -43,15 +43,15 @@
     [navBar setTitleTextAttributes:fontSizeDic];
     
     UIBarButtonItem *appearance = [UIBarButtonItem appearance];
-    //普通
+    // 普通
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor colorWithRed:138/255.0 green:138/255.0 blue:138/255.0 alpha:1];
     [appearance setTitleTextAttributes:dict forState:UIControlStateNormal];
-    //高亮
+    // 高亮
     NSMutableDictionary *hightDict = [NSMutableDictionary dictionary];
     hightDict[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [appearance setTitleTextAttributes:hightDict forState:UIControlStateHighlighted];
-    //不能点
+    // 不能点
     NSMutableDictionary *disableDict = [NSMutableDictionary dictionary];
     disableDict[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
     [appearance setTitleTextAttributes:disableDict forState:UIControlStateDisabled];

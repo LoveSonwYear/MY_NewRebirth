@@ -14,6 +14,6 @@
 
 @property (nonatomic, strong)RACSubject *openEyesRefreshSubject;
 
-- (void)load;
+- (void)loadData;
 
 @end

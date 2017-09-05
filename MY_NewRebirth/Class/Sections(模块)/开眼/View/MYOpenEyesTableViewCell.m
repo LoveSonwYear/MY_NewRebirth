@@ -7,6 +7,7 @@
 //
 
 #import "MYOpenEyesTableViewCell.h"
+#import "MYOpenEyesViewModel.h"
 
 @implementation MYOpenEyesTableViewCell
 
@@ -20,5 +21,29 @@
 
     // Configure the view for the selected state
 }
+
+#pragma mark - general
+- (void)ls_addSubviews {
+    
+}
+
+- (void)ls_layoutSubviews {
+    
+}
+
+#pragma mark - updataData
+//- (void)setOpenEyesCellViewModel:(MYOpenEyesCellViewModel *)openEyesCellViewModel {
+//    _openEyesCellViewModel = (MYOpenEyesViewModel *)openEyesCellViewModel;
+//}
+
+
+
+
+
+
+
+
+
+
 
 @end

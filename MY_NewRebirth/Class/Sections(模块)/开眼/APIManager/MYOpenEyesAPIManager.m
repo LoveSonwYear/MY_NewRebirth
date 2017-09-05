@@ -23,7 +23,7 @@
 
 #pragma mark - LSAPIManagerProtocol
 - (NSString *)path {
-    return @"baobab.wandoujia.com/";
+    return @"api/v1/feed?";
 }
 
 - (NSString *)serviceIdentifier {
@@ -52,12 +52,6 @@
     NSLog(@"验证成功 + isCorrectWithCallBackData + %@", data);
     return YES;
 }
-
-
-
-
-
-
 
 
 @end

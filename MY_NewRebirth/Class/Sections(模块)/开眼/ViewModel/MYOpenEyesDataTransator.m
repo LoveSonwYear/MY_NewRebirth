@@ -7,8 +7,27 @@
 //
 
 #import "MYOpenEyesDataTransator.h"
+#import "MYOpenEyesAPIManager.h"
+#import "MYOpenEyesInfo.h"
 
 @implementation MYOpenEyesDataTransator
+
+- (id)manager:(LSAPIBaseManager *)manager translateData:(NSDictionary *)data {
+    if ([manager isKindOfClass:[MYOpenEyesAPIManager class]]) {
+        
+        NSMutableArray *dailyListArray = data[@"dailyList"];
+        
+//        return [[dailyListArray rac_sequence] map:^id(NSDictionary *value) {
+//            
+//            MYOpenEyesInfo *openEyesInfo = [[MYOpenEyesInfo alloc] initWithDict:value];
+//            
+//        }];
+        
+    }
+    return nil;
+}
+
+
 
 
 

@@ -71,12 +71,12 @@
     // set the text color for unselected state
     // 普通状态下的文字属性
     NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
-    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    normalAttrs[NSForegroundColorAttributeName] = RGBACOLOR(219, 219, 219, 1);
     
     // set the text color for selected state
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor redColor];
+    selectedAttrs[NSForegroundColorAttributeName] = RGBACOLOR(81, 81, 81, 1);
     
     // set the text Attributes
     // 设置文字属性
@@ -97,7 +97,7 @@
     // set the bar shadow image
     // This shadow image attribute is ignored if the tab bar does not also have a custom background image.So at least set somthing.
     [self.tabBar setBackgroundImage:[[UIImage alloc] init]];
-    [self.tabBar setBackgroundColor:[UIColor whiteColor]];
+    [self.tabBar setBackgroundColor:RGBACOLOR(249, 249, 249, 1)];
     [self.tabBar setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
     
     // set the bar background image

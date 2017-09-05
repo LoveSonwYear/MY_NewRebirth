@@ -36,14 +36,13 @@
 #pragma mark - general
 - (void)ls_initData {
     
-    
+    [self.openEyesViewModel loadData];
 }
 
 - (void)ls_addSubviews {
     self.title = @"开眼";
     
     [self.view addSubview:self.openEyesView];
-    
 }
 
 - (void)ls_layoutSubviews {
