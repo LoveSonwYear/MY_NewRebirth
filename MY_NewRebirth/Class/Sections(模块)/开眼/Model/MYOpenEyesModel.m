@@ -71,9 +71,6 @@
     if (!info) {
         return nil;
     }
-    
-    
-    
     return nil;
 }
 
