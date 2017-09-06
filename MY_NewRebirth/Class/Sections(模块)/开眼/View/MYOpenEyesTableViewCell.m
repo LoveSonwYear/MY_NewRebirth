@@ -8,6 +8,7 @@
 
 #import "MYOpenEyesTableViewCell.h"
 #import "MYOpenEyesViewModel.h"
+#import "MYOpenEyesInfo.h"
 
 @interface MYOpenEyesTableViewCell ()
 // 背景图
@@ -70,9 +71,19 @@
 }
 
 #pragma mark - updataData
-//- (void)setOpenEyesCellViewModel:(MYOpenEyesCellViewModel *)openEyesCellViewModel {
-//    _openEyesCellViewModel = (MYOpenEyesViewModel *)openEyesCellViewModel;
-//}
+- (void)setOpenEyesCellViewModel:(MYOpenEyesCellViewModel *)openEyesCellViewModel {
+    _openEyesCellViewModel = openEyesCellViewModel;
+    
+    NSArray *dataArr = openEyesCellViewModel.openCellItem.myOpenEyesInfo.videoList;
+    MYOpenEyesVideoInfo *videoInfo = dataArr[0];
+    //背景视图
+    [self.openEyesCellBackImv sd_setImageWithURL:[NSURL URLWithString:videoInfo.coverForDetail] completed:nil];
+    //标题
+    self.openEyesCellTitleLabel.text = videoInfo.title;
+    //种类 时间
+    NSString *videoTime = [NSString stringWithFormat:@"%02ld'%02ld''",videoInfo.duration/60,videoInfo.duration%60];
+    self.openEyesCellTypesLabel.text = [NSString stringWithFormat:@"%@ / %@",videoInfo.category,videoTime];
+}
 
 
 #pragma mark - lazy
@@ -95,6 +106,8 @@
     if (!_openEyesCellTitleLabel) {
         _openEyesCellTitleLabel = [[UILabel alloc] init];
         _openEyesCellTitleLabel.textAlignment = NSTextAlignmentCenter;
+        _openEyesCellTitleLabel.textColor = [UIColor whiteColor];
+        _openEyesCellTitleLabel.font = [UIFont boldSystemFontOfSize:16.f];
     }
     return _openEyesCellTitleLabel;
 }
@@ -102,6 +115,9 @@
 - (UILabel *)openEyesCellTypesLabel {
     if (!_openEyesCellTypesLabel) {
         _openEyesCellTypesLabel = [[UILabel alloc] init];
+        _openEyesCellTypesLabel.textAlignment = NSTextAlignmentCenter;
+        _openEyesCellTypesLabel.textColor = [UIColor whiteColor];
+        _openEyesCellTypesLabel.font = [UIFont systemFontOfSize:14];
     }
     return _openEyesCellTypesLabel;
 }

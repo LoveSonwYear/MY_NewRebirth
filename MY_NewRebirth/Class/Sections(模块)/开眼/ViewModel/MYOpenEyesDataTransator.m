@@ -7,9 +7,11 @@
 //
 
 #import "MYOpenEyesDataTransator.h"
+#import "MYOpenEyesCellViewModel.h"
 #import "MYOpenEyesAPIManager.h"
 #import "MYOpenEyesInfo.h"
 #import "MYOpenEyesItem.h"
+#import "MYOpenEyesModel.h"
 
 @implementation MYOpenEyesDataTransator
 
@@ -18,13 +20,12 @@
         
         NSMutableArray *dailyListArray = data[@"dailyList"];
         
-//        return [[dailyListArray rac_sequence] map:^id(NSDictionary *value) {
-//            
-//            MYOpenEyesInfo *openEyesInfo = [[MYOpenEyesInfo alloc] initWithDict:value];
-//            MYOpenEyesItem *openEyesItem = [];
-//
-//        }];
-        
+        return [[[dailyListArray rac_sequence] map:^id(NSDictionary *value) {
+            
+            MYOpenEyesInfo *openEyesInfo = [[MYOpenEyesInfo alloc] initWithDict:value];
+            MYOpenEyesItem *openEyesItem = [[MYOpenEyesModel sharedInstance] getMYOpenEyesItemWithInfo:openEyesInfo];
+            return [[MYOpenEyesCellViewModel alloc] initWithDataItem:openEyesItem delegate:nil];
+        }] array];
     }
     return nil;
 }

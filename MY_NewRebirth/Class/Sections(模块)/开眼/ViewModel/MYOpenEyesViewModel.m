@@ -39,7 +39,7 @@
 - (void)managerCallAPIDidSuccess:(LSAPIBaseManager *)manager {
     self.dataArray = [manager fetchDataWithTranslator:self.openEyesDataTransator];
     // 发送信号
-    //[self.openEyesRefreshSubject sendNext:nil];
+    [self.openEyesRefreshSubject sendNext:nil];
 }
 
 - (void)managerCallAPIDidFailed:(LSAPIBaseManager *)manager {

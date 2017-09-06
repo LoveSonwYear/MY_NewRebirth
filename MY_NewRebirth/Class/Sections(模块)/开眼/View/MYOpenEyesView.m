@@ -37,7 +37,11 @@
 }
 
 - (void)ls_bindViewModel {
-    
+    @weakify(self);
+    [self.openEyesViewModel.openEyesRefreshSubject subscribeNext:^(id x) {
+        @strongify(self);
+        [self.openEyesTableView reloadData];
+    }];
 }
 
 #pragma mark - delegate
@@ -48,21 +52,24 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return [self.openEyesViewModel.dataArray count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MYOpenEyesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([MYOpenEyesTableViewCell class]) forIndexPath:indexPath];
-    
+    cell.openEyesCellViewModel = self.openEyesViewModel.dataArray[indexPath.row];
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return jisuanH(250.f);
+}
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -80,6 +87,7 @@
         _openEyesTableView = [[UITableView alloc] init];
         _openEyesTableView.delegate   = self;
         _openEyesTableView.dataSource = self;
+        _openEyesTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_openEyesTableView registerClass:[MYOpenEyesTableViewCell class] forCellReuseIdentifier:NSStringFromClass([MYOpenEyesTableViewCell class])];
     }
     return _openEyesTableView;

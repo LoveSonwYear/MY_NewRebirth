@@ -7,7 +7,10 @@
 //
 
 #import "LSViewModel.h"
+#import "MYOpenEyesItem.h"
 
 @interface MYOpenEyesCellViewModel : LSViewModel
+
+@property (nonatomic, strong)MYOpenEyesItem *openCellItem;
 
 @end

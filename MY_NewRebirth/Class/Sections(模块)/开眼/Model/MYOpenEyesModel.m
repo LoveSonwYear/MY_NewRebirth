@@ -71,11 +71,41 @@
     if (!info) {
         return nil;
     }
-    return nil;
+    NSArray *array = info.videoList;
+    if (![self.itemsDictionary objectForKey:array]) {
+        MYOpenEyesItem *item = [[MYOpenEyesItem alloc] initWithDataInfo:info delegate:self];
+        NSValue *value = [NSValue valueWithNonretainedObject:item];
+        [self.itemsDictionary setObject:value forKey:array];
+        [_itemList addObject:item];
+        if (_itemList.count > 0 && !_timerDispose) {
+            [self initTimer];
+        }
+        return item;
+    } else {
+        MYOpenEyesItem *item = (MYOpenEyesItem *)((NSValue *)[self.itemsDictionary objectForKey:array]).nonretainedObjectValue;
+        [item updateDataInfo:info];
+        return item;
+    }
 }
 
+#pragma mark - lazy
+- (NSMutableDictionary *)itemsDictionary {
+    if (!_itemsDictionary) {
+        _itemsDictionary = [[NSMutableDictionary alloc] init];
+    }
+    return _itemsDictionary;
+}
 
-
+#pragma mark - LSCodeStandardItemDelegate
+- (void)removeFromOpenEyesModel:(MYOpenEyesItem *)item {
+    NSArray *array = item.myOpenEyesInfo.videoList;
+    if ([self.itemsDictionary.allKeys containsObject:array]) {
+        [self.itemsDictionary removeObjectForKey:array];
+    }
+    if (self.itemsDictionary.allKeys.count == 0 && _timerDispose) {
+        [self clearTimer];
+    }
+}
 
 
 
