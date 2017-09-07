@@ -68,7 +68,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return jisuanH(250.f);
+    return jisuanH(500.f);
 }
 
 #pragma mark - UITableViewDelegate

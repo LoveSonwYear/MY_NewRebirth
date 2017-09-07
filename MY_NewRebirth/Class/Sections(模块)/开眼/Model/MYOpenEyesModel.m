@@ -57,7 +57,7 @@
 }
 
 - (void)fireTimerObservers {
-    NSHashTable *tmp = [_timerDispose copy];
+    NSHashTable *tmp = [_itemList copy];
     for (MYOpenEyesItem *openEyesItem in tmp) {
         if (![_itemList containsObject:openEyesItem]) {
             continue;
