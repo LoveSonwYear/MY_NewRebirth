@@ -25,9 +25,14 @@
 @end
 
 @interface MYOpenEyesInfo : LSDataInfo
-@property (nonatomic, assign) NSInteger date;
-@property (nonatomic, assign) NSInteger total;
-@property (nonatomic, strong) NSArray *videoList;
+
+@property (nonatomic, strong, readonly)NSString *date;
+@property (nonatomic, strong, readonly)NSString *total;
+@property (nonatomic, strong, readonly)NSArray *videoList;
+
+//@property (nonatomic, assign) NSInteger date;
+//@property (nonatomic, assign) NSInteger total;
+//@property (nonatomic, strong) NSArray *videoList;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 

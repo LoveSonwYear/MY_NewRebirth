@@ -12,9 +12,28 @@
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
     if (self = [super init]) {
-        
+        [self initWithDictionary:dict];
     }
     return self;
+}
+
+- (void)initWithDictionary:(NSDictionary *)dictionary {
+    _date      = dictionary[@"date"];
+    _total     = dictionary[@"total"];
+    _videoList = dictionary[@"videoList"];
+}
+
+- (void)updateDataInfo:(MYOpenEyesInfo *)dataInfo {
+    
+    if (dataInfo.date) {
+        _date = dataInfo.date;
+    }
+    if (dataInfo.total) {
+        _total = dataInfo.total;
+    }
+    if (dataInfo.videoList) {
+        _videoList = dataInfo.videoList;
+    }
 }
 
 
